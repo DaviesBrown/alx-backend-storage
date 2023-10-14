@@ -1,0 +1,5 @@
+echo 'INSERT INTO users (email, name) VALUES ("john@dylan.com", "John");' | sudo mysql holberton
+echo 'INSERT INTO users (email, name, country) VALUES ("bob@dylan.com", "Bob", "US");' | sudo mysql holberton
+echo 'INSERT INTO users (email, name, country) VALUES ("sylvie@dylan.com", "Sylvie", "CO");' | sudo mysql holberton
+echo 'INSERT INTO users (email, name, country) VALUES ("jean@dylan.com", "Jean", "FR");' | sudo mysql holberton
+echo "select (a/b) from numbers;" | sudo mysql holberton
