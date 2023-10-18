@@ -9,6 +9,9 @@ method = ["GET", "POST", "PUT", "PATCH", "DELETE"]
 
 
 def status_code_count(mongo_collection: Collection, method="") -> int:
+    """
+    count http method
+    """
     if method:
         return mongo_collection.count_documents({'method': method})
     else:
@@ -16,6 +19,9 @@ def status_code_count(mongo_collection: Collection, method="") -> int:
 
 
 def main() -> None:
+    """
+    main function
+    """
     client = pm.MongoClient('mongodb://127.0.0.1:27017')
     m_collection = client.logs.nginx
     doc_count = status_code_count(m_collection)
