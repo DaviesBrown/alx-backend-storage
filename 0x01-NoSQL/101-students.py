@@ -2,10 +2,9 @@
 """
 student by avg score
 """
-from pymongo.collection import Collection
 
 
-def top_students(mongo_collection: Collection):
+def top_students(mongo_collection):
     """
     returns all students by average score
     """
