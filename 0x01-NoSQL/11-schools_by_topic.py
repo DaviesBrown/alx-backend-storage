@@ -2,10 +2,9 @@
 """
 list all school
 """
-from pymongo.collection import Collection
 
 
-def schools_by_topic(mongo_collection: Collection, topic: str):
+def schools_by_topic(mongo_collection, topic):
     """
     list all school by a specific topic
     """
