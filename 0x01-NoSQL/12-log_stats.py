@@ -3,12 +3,10 @@
 log stats
 """
 import pymongo as pm
-from pymongo.collection import Collection
-
 method = ["GET", "POST", "PUT", "PATCH", "DELETE"]
 
 
-def status_code_count(mongo_collection: Collection, method="") -> int:
+def status_code_count(mongo_collection, method=""):
     """
     count http method
     """
@@ -18,7 +16,7 @@ def status_code_count(mongo_collection: Collection, method="") -> int:
         return mongo_collection.count_documents({})
 
 
-def main() -> None:
+def main():
     """
     main function
     """
