@@ -2,11 +2,9 @@
 """
 update topics
 """
-from typing import List
-from pymongo.collection import Collection
 
 
-def update_topics(mongo_collection: Collection, name: str, topics: List[str]):
+def update_topics(mongo_collection, name, topics):
     """
     changes all topics of a school document
     based on the name
@@ -14,4 +12,4 @@ def update_topics(mongo_collection: Collection, name: str, topics: List[str]):
     mongo_collection.update_one(
         {"name": name},
         {"$set": {"topics": topics}}
-        )
+    )
